@@ -1,3 +1,4 @@
+import numpy as np
 def calculate_matrix_mean(matrix: list[list[float]], mode: str) -> list[float]:
     means = []
     if mode == 'column':
@@ -13,3 +14,11 @@ def calculate_matrix_mean(matrix: list[list[float]], mode: str) -> list[float]:
                 sum += matrix[i][j]
             means.append(sum/len(matrix[0]))
     return means
+
+    ##OR
+
+    a = np.array(matrix)
+    if mode == 'column':
+        return a.mean(axis=0).tolist()
+    else:
+        return a.mean(axis=1).tolist()
