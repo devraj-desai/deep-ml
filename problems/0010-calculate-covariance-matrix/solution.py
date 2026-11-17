@@ -19,3 +19,21 @@ def calculate_covariance_matrix(vectors: list[list[float]]) -> list[list[float]]
             ans[i][j] = sum/(obs - 1)
 
     return ans
+
+
+    ## OR
+
+
+    means = [sum(v) / obs for v in vectors]
+
+    return [
+        [
+            sum(
+                (vectors[i][k] - means[i]) *
+                (vectors[j][k] - means[j])
+                for k in range(obs)
+            ) / (obs - 1)
+            for j in range(features)
+        ]
+        for i in range(features)
+    ]
