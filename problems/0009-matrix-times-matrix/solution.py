@@ -1,3 +1,5 @@
+import numpy as np
+
 def matrixmul(a:list[list[int|float]],
               b:list[list[int|float]])-> list[list[int|float]]:
     if len(a[0]) != len(b):
@@ -10,4 +12,11 @@ def matrixmul(a:list[list[int|float]],
             for k in range(len(a[0])):
                 c[i][j] += a[i][k]*b[k][j]
         
+    return c
+
+
+    ## OR
+
+    c = np.array(a) @ np.array(b);
+
     return c
