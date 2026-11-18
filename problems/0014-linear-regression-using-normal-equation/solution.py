@@ -1,0 +1,7 @@
+import numpy as np
+def linear_regression_normal_equation(X: list[list[float]], y: list[float]) -> list[float]:
+    # Your code here, make sure to round
+    y = np.array(y, dtype=float)
+    X = np.array(X, dtype=float)
+    theta = np.linalg.inv(X.T @ X) @ X.T @ y
+    return np.round(theta, 4).tolist()
