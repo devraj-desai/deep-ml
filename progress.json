@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-18T05:10:54.443Z",
+  "generated_at": "2026-11-19T16:53:23.679Z",
   "items": {
     "problem:1": {
       "kind": "problem",
@@ -141,6 +141,19 @@
       "path": "problems/0014-linear-regression-using-normal-equation",
       "first_solved_at": "2026-11-18T05:10:53.584Z",
       "last_pushed_at": "2026-11-18T05:10:53.584Z",
+      "language": "python",
+      "lines": 7
+    },
+    "problem:22": {
+      "kind": "problem",
+      "id": "22",
+      "title": "Sigmoid Activation Function Understanding",
+      "difficulty": "easy",
+      "category": "Deep Learning",
+      "url": "https://www.deep-ml.com/problems/22",
+      "path": "problems/0022-sigmoid-activation-function-understanding",
+      "first_solved_at": "2026-11-19T16:53:22.967Z",
+      "last_pushed_at": "2026-11-19T16:53:22.967Z",
       "language": "python",
       "lines": 7
     }
