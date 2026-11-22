@@ -12,7 +12,7 @@ def simulate_clt(num_samples: int, sample_size: int, distribution: str = 'unifor
     Returns:
         Mean of the sample means (float)
     """
-    # Your code here
+    ## Your code here
     sample_mean = []
     for _ in range(num_samples):
         if(distribution == 'uniform'):
@@ -32,4 +32,9 @@ def simulate_clt(num_samples: int, sample_size: int, distribution: str = 'unifor
         samples = np.random.exponential(1, (sample_size, num_samples))
 
     return float(np.mean(np.mean(samples, axis=1)))
+
+    ## OR
+
+    return float(sum(sum(row)/len(row) for row in samples) / 
+                len(samples))
     pass
